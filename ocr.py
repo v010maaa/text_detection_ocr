@@ -14,7 +14,7 @@ def main(image_file):
         content = image_file.read()
 
     image = types.Image(content=content)
-
+    print(image)
     # Performs label detection on the image file
     response = client.text_detection(image=image)
     labels = response.text_annotations
